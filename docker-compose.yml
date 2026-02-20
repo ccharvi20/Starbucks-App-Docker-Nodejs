@@ -1,0 +1,36 @@
+version: '3'
+services:
+main-service:
+build: ./main-service
+container_name: main-service-container
+ports:
+- "81-80"
+restart: always 
+
+product-service:
+build: ./product-service
+container_name: product-service-container
+ports:
+- "82-80"
+restart: always
+
+cart-service:
+build: ./cart-service
+container_name: cart-service-container
+ports:
+- "83-80"
+restart: always
+
+user-service:
+build: ./user-service
+container_name: user-service-container
+ports:
+- "84-80"
+restart: always
+
+order-service:
+build: ./order-service
+container_name: order-service-container
+ports:
+- "85-80"
+restart: always
